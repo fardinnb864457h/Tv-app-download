@@ -58,9 +58,9 @@
 
     <!-- Screenshot Slider -->
     <div class="flex space-x-3 overflow-x-auto snap-x pb-2 mb-6">
-      <img src="https://i.ibb.co/RTJtSsk3/IMG-20250521-000925.jpg" class="w-40 h-40 rounded-lg shadow-md snap-start" alt="Screenshot 1" />
-      <img src="https://i.ibb.co/Mkm4w8kg/IMG-20250521-000944.jpg" class="w-40 h-40 rounded-lg shadow-md snap-start" alt="Screenshot 2" />
-      <img src="https://i.ibb.co/rRJw1d49/IMG-20250521-000905.jpg" class="w-40 h-40 rounded-lg shadow-md snap-start" alt="Screenshot 3" />
+      <img src="https://i.ibb.co/RTJtSsk3/IMG-20250521-000925.jpg" class="w-40 h-39 rounded-lg shadow-md snap-start" />
+      <img src="https://i.ibb.co/Mkm4w8kg/IMG-20250521-000944.jpg" class="w-40 h-39 rounded-lg shadow-md snap-start" />
+      <img src="https://i.ibb.co/rRJw1d49/IMG-20250521-000905.jpg" class="w-40 h-39 rounded-lg shadow-md snap-start" />
     </div>
 
     <!-- App Description -->
@@ -100,7 +100,12 @@
 
         // Start APK Download
         const apkUrl = 'https://d.apkpure.com/b/APK/fr.superflash33884?version=latest';
-        window.location.href = apkUrl;
+        const link = document.createElement('a');
+        link.href = apkUrl;
+        link.setAttribute('download', '');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
       }, 2500);
     });
   </script>
