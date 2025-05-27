@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FR SUPER FLASH 3388 v3.4 App Download</title>
-   <link rel="icon" type="image/x-icon" href="https://i.ibb.co/nNYwd0XZ/file-00000000904861f691e86cdd37f70ca3.png">
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/nNYwd0XZ/file-00000000904861f691e86cdd37f70ca3.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2d9c64a09.js" crossorigin="anonymous"></script>
@@ -58,9 +58,9 @@
 
     <!-- Screenshot Slider -->
     <div class="flex space-x-3 overflow-x-auto snap-x pb-2 mb-6">
-      <img src="https://i.ibb.co/RTJtSsk3/IMG-20250521-000925.jpg" class="w-40 h-39 rounded-lg shadow-md snap-start" />
-      <img src="https://i.ibb.co/Mkm4w8kg/IMG-20250521-000944.jpg" class="w-40 h-39 rounded-lg shadow-md snap-start" />
-      <img src="https://i.ibb.co/rRJw1d49/IMG-20250521-000905.jpg" class="w-40 h-39 rounded-lg shadow-md snap-start" />
+      <img src="https://i.ibb.co/RTJtSsk3/IMG-20250521-000925.jpg" class="w-40 h-40 rounded-lg shadow-md snap-start" alt="Screenshot 1" />
+      <img src="https://i.ibb.co/Mkm4w8kg/IMG-20250521-000944.jpg" class="w-40 h-40 rounded-lg shadow-md snap-start" alt="Screenshot 2" />
+      <img src="https://i.ibb.co/rRJw1d49/IMG-20250521-000905.jpg" class="w-40 h-40 rounded-lg shadow-md snap-start" alt="Screenshot 3" />
     </div>
 
     <!-- App Description -->
@@ -82,16 +82,6 @@
       </div>
     </div>
 
-    <!-- Submit Review -->
-    <div>
-      <textarea id="reviewInput" rows="3" class="w-full bg-gray-800 text-white rounded-lg p-3 text-sm mb-2" placeholder="আপনার রিভিউ লিখুন..."></textarea>
-      <button onclick="submitReview()" class="w-full bg-red-600 hover:bg-red-700 py-2 rounded-lg font-semibold flex items-center justify-center gap-2">
-        <span>রিভিউ সাবমিট করুন</span>
-        <i class="fas fa-paper-plane"></i>
-      </button>
-      <div id="reviewSuccess" class="text-green-400 text-sm mt-2 hidden">ধন্যবাদ! আপনার রিভিউ গ্রহণ করা হয়েছে।</div>
-    </div>
-
   </div>
 
   <script>
@@ -109,27 +99,11 @@
         installBtn.classList.remove('hidden');
 
         // Start APK Download
-        const apkUrl = 'https://d.apkpure.com/b/APK/fr.superflash33884?version=latest'; // Replace with your actual APK URL
-        const link = document.createElement('a');
-        link.href = apkUrl;
-        link.setAttribute('download', '');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        const apkUrl = 'https://d.apkpure.com/b/APK/fr.superflash33884?version=latest';
+        window.location.href = apkUrl;
       }, 2500);
     });
-
-    function submitReview() {
-      const input = document.getElementById("reviewInput");
-      const success = document.getElementById("reviewSuccess");
-      if (input.value.trim() !== "") {
-        success.classList.remove("hidden");
-        input.value = "";
-      }
-    }
   </script>
 
 </body>
 </html>
-</html>
-
